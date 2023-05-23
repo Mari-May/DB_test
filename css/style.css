@@ -346,7 +346,7 @@ text-decoration: none;
 
 #slider{
     width: auto;
-    height: 30vh;/*60*/
+    height: 60vh;/*60*/
     margin: 50px auto;
     border: 2px solid transparent; 
     overflow: hidden;
