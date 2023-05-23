@@ -345,7 +345,7 @@ text-decoration: none;
 }
 
 #slider{
-    width: auto;
+    width:  600vw;
     height: 60vh;/*60*/
     margin: 50px auto;/*50*/
     border: 2px solid #ffff; /*transparent*/
