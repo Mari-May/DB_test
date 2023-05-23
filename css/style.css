@@ -347,15 +347,15 @@ text-decoration: none;
 #slider{
     width: auto;
     height: 60vh;/*60*/
-    margin: 50px auto;
-    border: 12px solid transparent; 
+    margin: 30px auto;/*50*/
+    border: 2px solid transparent; 
     overflow: hidden;
     
 }
 
 #polosa {
   
-    width: 300vw;/*600*/
+    width: 600vw;/*600*/
     height: 200vh;/*300*/
     position: relative;
     transition: all ease 3s;
