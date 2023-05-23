@@ -356,7 +356,7 @@ text-decoration: none;
 #polosa {
   
     width: 600vw;
-    height: 250vh;/*300*/
+    height: 200vh;/*300*/
     position: relative;
     transition: all ease 3s;
 }
