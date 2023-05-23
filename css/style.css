@@ -348,14 +348,14 @@ text-decoration: none;
     width: auto;
     height: 60vh;/*60*/
     margin: 50px auto;
-    border: 2px solid transparent; 
+    border: 12px solid transparent; 
     overflow: hidden;
     
 }
 
 #polosa {
   
-    width: 600vw;
+    width: 300vw;/*600*/
     height: 200vh;/*300*/
     position: relative;
     transition: all ease 3s;
