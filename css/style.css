@@ -347,7 +347,7 @@ text-decoration: none;
 #slider{
     width: auto;
     height: 60vh;/*60*/
-    margin: 30px auto;/*50*/
+    margin: 50px auto;/*50*/
     border: 2px solid transparent; 
     overflow: hidden;
     
@@ -356,7 +356,7 @@ text-decoration: none;
 #polosa {
   
     width: 600vw;/*600*/
-    height: 200vh;/*300*/
+    height: 300vh;/*300*/
     position: relative;
     transition: all ease 3s;
 }
