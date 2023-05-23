@@ -345,13 +345,12 @@ text-decoration: none;
 }
 
 #slider{
-   /* width:  600vw;
-    height: 60vh;/*60*/
-    width: 600vw;/*600*/
+ 
+    width: auto;/*600*/
     height: 30vh;/*300*/
     
     margin: 50px auto;/*50*/
-    border: 2px solid #ffff; /*transparent*/
+    border: 2px solid transparent; /*transparent*/
     overflow: hidden;
     
 }
