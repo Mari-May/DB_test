@@ -206,7 +206,7 @@ box-sizing: border-box;
     color: lightcyan;
     text-decoration: none;
     font-weight: 50;/*100*/    
-    font-size: 65px;
+    font-size: 45px;/65*/
          
     margin: 60px;
     transition: color 0.33s linear; 
