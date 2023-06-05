@@ -131,7 +131,9 @@
                 </div>
 
 
-   
+                <div class='btn'>
+                    <a class='button1' href="login.html">ВХІД</a>
+                </div>
             </div>
 
             <section class="fullskrean">
@@ -168,7 +170,7 @@
                                 <option value="Чернівецька область">
                                 <option value="Чернігівська область">
                             </datalist>
-                            <button type="submi"><i class="found"></i></button>
+                            <button type="submi" onclick="searchCity()"></button>
                         </form>
                     </div>
                 </div>
@@ -176,8 +178,10 @@
         </div>
 
         <script>
-            // JavaScript код
-            const cityOptions = [
+            function searchCity() {
+			const input = document.querySelector('#cityForm input');
+      		const selectedCity = input.value;
+        	const cityOptions = [
             { value: 'Автономна Республіка Крим', path: '/crimea.html' },
             { value: 'Вінницька область', path: '/vinn.html' },
             { value: 'Волиньска область', path: '/volyn.html' },
@@ -205,20 +209,13 @@
             { value: 'Чернігівська область', path: '/chernih.html' }
             ];
 
-            const cityForm = document.getElementById('cityForm');
+	
+          const selectedOption = cityOptions.find(option => option.value === selectedCity);
 
-            cityForm.addEventListener('submi', (event) => {
-            event.preventDefault();
-            const input = event.target.querySelector('input');
-            const selectedCity = input.value;
-            const cityOption = cityOptions.find((option) => option.value === selectedCity);
-
-            if (cityOption) {
-            window.location.href = cityOption.path;
-            } else {
-            alert('Виберіть місто зі списку');
-            }
-            });
-        </script>
+      if (selectedOption) {
+        window.location.href = selectedOption.path;
+      }
+    }
+  </script>
 </body>
 </html>
