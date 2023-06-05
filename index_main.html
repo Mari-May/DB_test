@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="ua">
 <head>
 <meta charset="UTF-8">
@@ -9,37 +9,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
-    
+
+
     <title>Подорожі</title>
 </head>
 <body>
-    
-    
+
+
 <div class='header' >
-    <!--<div class='line'>-->
-    <div class="wrapper">
+
         <div class='container'>
             <div class='header-line'>
-                
+
                 <div class='header-logo'>
                     <img src="images/logo-50.png">
                 </div>
-                
+
                 <div class='nav'>
                     <div>
                     <a class='nav-item' href="index_main.html">ГОЛОВНА</a>
                     <a class='nav-item' href="index_city.html">МІСТА</a>
                     </div>
                 </div>
-            </div> 
-            
+
+
+                <div class='btn'>
+                    <a class='button1' href="login.html">ВХІД</a>
+                </div>
+            </div>
+
     <section class="fullskrean" >
         <div class='header-down'>
             <div class='header-title'>
-                Обирай місто для подорожі 
-            </div> 
-            
+                Обирай місто для подорожі
+            </div>
+
             <div class='input'>
             <form>
                 <input class="l" list="citys" name="city" id="city">
@@ -70,24 +74,151 @@
                     <option value="Чернівецька область">
                     <option value="Чернігівська область">
                 </datalist>
-              
-                
+
+
                 <button type="submi"><i class="found"></i></button>
-            </form>  
-                
-                
-            </div> 
-            
+            </form>
+
+
+            </div>
+
         </div>
-            
-        
-            </section>  
+
+
+            </section>
         </div>
-  
-    </div>
+
+
 </div>
-    
-    
-</body>  
-    
+
+
+</body>
+
+</html>-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+
+    <title>Подорожі</title>
+</head>
+<body>
+    <div class='header'>
+        <div class='container'>
+            <div class='header-line'>
+
+                <div class='header-logo'>
+                    <img src="images/logo-50.png">
+                </div>
+
+                <div class='nav'>
+                    <div>
+                        <a class='nav-item' href="index_main.html">ГОЛОВНА</a>
+                        <a class='nav-item' href="index_city.html">МІСТА</a>
+                    </div>
+                </div>
+
+
+   
+            </div>
+
+            <section class="fullskrean">
+                <div class="header-down">
+                    <div class="header-title">Обирай місто для подорожі</div>
+
+                    <div class="input">
+                        <form id="cityForm">
+                            <input class="l" list="citys" />
+                            <datalist id="citys">
+                                <option value="Автономна Республіка Крим">
+                                <option value="Вінницька область">
+                                <option value="Волиньска область">
+                                <option value="Дніпропетровська область">
+                                <option value="Донецька область">
+                                <option value="Житомирська область">
+                                <option value="Закарпатська область">
+                                <option value="Запорізька область">
+                                <option value="Івано-Франківська область">
+                                <option value="Київська область">
+                                <option value="Кіровоградська область">
+                                <option value="Луганська область">
+                                <option value="Львівська область">
+                                <option value="Миколаївська область">
+                                <option value="Одеська область">
+                                <option value="Полтавська область">
+                                <option value="Рівненська область">
+                                <option value="Сумська область">
+                                <option value="Тернопільська область">
+                                <option value="Харківська область">
+                                <option value="Херсонська область">
+                                <option value="Хмельницька область">
+                                <option value="Черкаська область">
+                                <option value="Чернівецька область">
+                                <option value="Чернігівська область">
+                            </datalist>
+                            <button type="submi"><i class="found"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            // JavaScript код
+            const cityOptions = [
+            { value: 'Автономна Республіка Крим', path: '/crimea.html' },
+            { value: 'Вінницька область', path: '/vinn.html' },
+            { value: 'Волиньска область', path: '/volyn.html' },
+            { value: 'Дніпропетровська область', path: '/dnipro.html' },
+            { value: 'Донецька область', path: '/donetsk.html' },
+            { value: 'Житомирська область', path: '/zhytom.html' },
+            { value: 'Закарпатська область', path: '/afCarpat.html' },
+            { value: 'Запорізька область', path: '/zaporozhye.html' },
+            { value: 'Івано-Франківська область', path: '/fr.html' },
+            { value: 'Київська область', path: '/kyiv.html' },
+            { value: 'Кіровоградська область', path: '/kiro.html' },
+            { value: 'Луганська область', path: '/lug.html' },
+            { value: 'Львівська область', path: '/lviv.html' },
+            { value: 'Миколаївська область', path: '/mik.html' },
+            { value: 'Одеська область', path: '/od.html' },
+            { value: 'Полтавська область', path: '/pol.html' },
+            { value: 'Рівненська область', path: '/riv.html' },
+            { value: 'Сумська область', path: '/summ.html' },
+            { value: 'Тернопільська область', path: '/tern.html' },
+            { value: 'Харківська область', path: '/khar.html' },
+            { value: 'Херсонська область', path: '/khers.html' },
+            { value: 'Хмельницька область', path: '/khmel.html' },
+            { value: 'Черкаська область', path: '/cherc.html' },
+            { value: 'Чернівецька область', path: '/chern.html' },
+            { value: 'Чернігівська область', path: '/chernih.html' }
+            ];
+
+            const cityForm = document.getElementById('cityForm');
+
+            cityForm.addEventListener('submi', (event) => {
+            event.preventDefault();
+            const input = event.target.querySelector('input');
+            const selectedCity = input.value;
+            const cityOption = cityOptions.find((option) => option.value === selectedCity);
+
+            if (cityOption) {
+            window.location.href = cityOption.path;
+            } else {
+            alert('Виберіть місто зі списку');
+            }
+            });
+        </script>
+</body>
 </html>
