@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+<meta charset="UTF-8">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+       <title>Реестрція</title>
+</head>
+<body>
+    <div class='header5' >
+        <div class='container'>
+            <div class='header-line'>
+
+                <div class='header-logo'>
+                    <img src="images/logo-50.png">
+                </div>
+
+                <div class='nav'>
+                  <div>
+                  <a class='nav-item' href="index_main.html">ГОЛОВНА</a>
+                  <a class='nav-item' href="index_city.html">МІСТА</a>
+                  </div>
+              </div>
+
+            </div> 
+        </div>
+        <section class="log">
+        <div class="form-box">
+          <div class="form-value">
+              <form id="registration-form" method="POST" action="/register">
+                  <a class="text-log"><h2>Реестрція</h2></a>
+                  <div class="inputbox">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="login" required name="email">
+                    <label for="">E-Mail</label> 
+                </div>
+                  <div class="inputbox">
+                      <ion-icon name="person-outline"></ion-icon>
+                      <input type="login" required name="login">
+                      <label for="">Username</label> 
+                  </div>
+                  <div class="inputbox">
+                      <ion-icon name="bag-outline"></ion-icon>
+                      <input type="password" required name="password">
+                      <label for="">Password</label> 
+                  </div>
+                
+                  
+                  <button type="submit" class="button-log">Зарееструватися</button>
+                  
+              </form>
+          </div>
+      </div>
+
+   </section>
+   <script>
+   const form = document.getElementById('registration-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Забороняємо браузеру відправляти форму звичайним способом
+  
+      const xhr = new XMLHttpRequest(); // Створюємо новий об'єкт для відправки запиту
+      xhr.open('POST', '/register', true); // Вказуємо метод, URL та асинхронний режим запиту
+  
+      // Встановлюємо заголовок запиту, щоб сервер зміг правильно обробити дані форми
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  
+      // Обробляємо результат запиту
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) { // Якщо запит завершено
+          if (xhr.status === 200) { // Якщо запит успішний
+            alert(xhr.responseText); // Виводимо повідомлення про успішну реєстрацію
+            form.reset(); // Очищаємо форму
+          } else {
+            alert('Помилка реєстрації! Спробуйте ще раз.'); // Виводимо повідомлення про помилку
+          }
+        }
+      };
+  
+      // Відправляємо дані форми на сервер
+      xhr.send(new FormData(form));
+    });
+  </script>
+      <script src="api/login.js"></script>
+    </div>
+</body>
