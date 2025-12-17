@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <title>Travel</title>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="header-line">
+        <div class="header-logo">
+          <img src="images/logo-50.png">
+        </div>
+        <div class="nav">
+          <div>
+            <a class="nav-item" href="index_main_EN.html">HOME</a>
+            <a class="nav-item" href="index_city.html">CITIES</a>
+            <a class="nav-item" href="index_main.html">UA</a>
+            <a class="nav-item" href="index_main_EN.html">EN</a>
+            <a class="nav-item" href="index_main_DE.html">DE</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="fullskrean">
+        <div class="header-down">
+          <div class="header-title">Choose a region for your journey</div>
+          <div class="input">
+            <form id="cityForm">
+              <input class="l" list="citys" />
+              <datalist id="citys">
+                <option value="Autonomous Republic of Crimea">
+                <option value="Vinnytsia region">
+                <option value="Volyn region">
+                <option value="Dnipropetrovsk region">
+                <option value="Donetsk region">
+                <option value="Zhytomyr region">
+                <option value="Zakarpattia region">
+                <option value="Zaporizhzhia region">
+                <option value="Ivano-Frankivsk region">
+                <option value="Kyiv region">
+                <option value="Kirovohrad region">
+                <option value="Luhansk region">
+                <option value="Lviv region">
+                <option value="Mykolaiv region">
+                <option value="Odesa region">
+                <option value="Poltava region">
+                <option value="Rivne region">
+                <option value="Sumy region">
+                <option value="Ternopil region">
+                <option value="Kharkiv region">
+                <option value="Kherson region">
+                <option value="Khmelnytskyi region">
+                <option value="Cherkasy region">
+                <option value="Chernivtsi region">
+                <option value="Chernihiv region">
+              </datalist>
+              <button type="submit" onclick="searchCity(event)"><i class="found"></i></button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function searchCity(event) {
+      event.preventDefault();
+      const input = document.querySelector('.l');
+      const selectedCity = input.value.trim();
+      const cityOptions = [
+        { value: 'Autonomous Republic of Crimea', path: 'crimea.html' },
+        { value: 'Vinnytsia region', path: 'vinn.html' },
+        { value: 'Volyn region', path: 'volyn.html' },
+        { value: 'Dnipropetrovsk region', path: 'dnipro.html' },
+        { value: 'Donetsk region', path: 'donetsk.html' },
+        { value: 'Zhytomyr region', path: 'zhytom.html' },
+        { value: 'Zakarpattia region', path: 'afCarpat.html' },
+        { value: 'Zaporizhzhia region', path: 'zaporozhye.html' },
+        { value: 'Ivano-Frankivsk region', path: 'fr.html' },
+        { value: 'Kyiv region', path: 'kyiv.html' },
+        { value: 'Kirovohrad region', path: 'kiro.html' },
+        { value: 'Luhansk region', path: 'lug.html' },
+        { value: 'Lviv region', path: 'lviv.html' },
+        { value: 'Mykolaiv region', path: 'mik.html' },
+        { value: 'Odesa region', path: 'od.html' },
+        { value: 'Poltava region', path: 'pol.html' },
+        { value: 'Rivne region', path: 'riv.html' },
+        { value: 'Sumy region', path: 'summ.html' },
+        { value: 'Ternopil region', path: 'tern.html' },
+        { value: 'Kharkiv region', path: 'khar.html' },
+        { value: 'Kherson region', path: 'khers.html' },
+        { value: 'Khmelnytskyi region', path: 'khmel.html' },
+        { value: 'Cherkasy region', path: 'cher.html' },
+        { value: 'Chernivtsi region', path: 'cherniv.html' },
+        { value: 'Chernihiv region', path: 'chernig.html' }
+      ];
+
+      const selectedOption = cityOptions.find(option => option.value === selectedCity);
+      if (selectedOption) {
+        window.location.href = selectedOption.path;
+      }
+    }
+  </script>
+</body>
+</html>
