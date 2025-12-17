@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Tinos:wght@400;700&display=swap" rel="stylesheet">
+  <title>Reisen</title>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="header-line">
+        <div class="header-logo">
+          <img src="images/logo-50.png">
+        </div>
+        <div class="nav">
+          <div>
+            <a class="nav-item" href="index_main_DE.html">STARTSEITE</a>
+            <a class="nav-item" href="index_city.html">STÄDTE</a>
+            <a class="nav-item" href="index_main.html">UA</a>
+            <a class="nav-item" href="index_main_EN.html">EN</a>
+            <a class="nav-item" href="index_main_DE.html">DE</a>
+          </div>
+        </div>
+      </div>
+
+      <section class="fullskrean">
+        <div class="header-down">
+          <div class="header-title">Wählen Sie eine Region für Ihre Reise</div>
+          <div class="input">
+            <form id="cityForm">
+              <input class="l" list="citys" />
+              <datalist id="citys">
+                <option value="Autonome Republik Krim">
+                <option value="Gebiet Winnyzja">
+                <option value="Gebiet Wolyn">
+                <option value="Gebiet Dnipropetrowsk">
+                <option value="Gebiet Donezk">
+                <option value="Gebiet Schytomyr">
+                <option value="Transkarpatien">
+                <option value="Gebiet Saporischschja">
+                <option value="Gebiet Iwano-Frankiwsk">
+                <option value="Gebiet Kyjiw">
+                <option value="Gebiet Kirowohrad">
+                <option value="Gebiet Luhansk">
+                <option value="Gebiet Lwiw">
+                <option value="Gebiet Mykolajiw">
+                <option value="Gebiet Odessa">
+                <option value="Gebiet Poltawa">
+                <option value="Gebiet Riwne">
+                <option value="Gebiet Sumy">
+                <option value="Gebiet Ternopil">
+                <option value="Gebiet Charkiw">
+                <option value="Gebiet Cherson">
+                <option value="Gebiet Chmelnyzkyj">
+                <option value="Gebiet Tscherkassy">
+                <option value="Gebiet Tscherniwzi">
+                <option value="Gebiet Tschernihiw">
+              </datalist>
+               <button type="submi" onclick="searchCity(event)"><i class="found"></i></button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    function searchCity(event) {
+      event.preventDefault();
+      const input = document.querySelector('.l');
+      const selectedCity = input.value.trim();
+      const cityOptions = [
+        { value: 'Autonome Republik Krim', path: 'crimea.html' },
+        { value: 'Gebiet Winnyzja', path: 'vinn.html' },
+        { value: 'Gebiet Wolyn', path: 'volyn.html' },
+        { value: 'Gebiet Dnipropetrowsk', path: 'dnipro.html' },
+        { value: 'Gebiet Donezk', path: 'donetsk.html' },
+        { value: 'Gebiet Schytomyr', path: 'zhytom.html' },
+        { value: 'Transkarpatien', path: 'afCarpat.html' },
+        { value: 'Gebiet Saporischschja', path: 'zaporozhye.html' },
+        { value: 'Gebiet Iwano-Frankiwsk', path: 'fr.html' },
+        { value: 'Gebiet Kyjiw', path: 'kyiv.html' },
+        { value: 'Gebiet Kirowohrad', path: 'kiro.html' },
+        { value: 'Gebiet Luhansk', path: 'lug.html' },
+        { value: 'Gebiet Lwiw', path: 'lviv.html' },
+        { value: 'Gebiet Mykolajiw', path: 'mik.html' },
+        { value: 'Gebiet Odessa', path: 'od.html' },
+        { value: 'Gebiet Poltawa', path: 'pol.html' },
+        { value: 'Gebiet Riwne', path: 'riv.html' },
+        { value: 'Gebiet Sumy', path: 'summ.html' },
+        { value: 'Gebiet Ternopil', path: 'tern.html' },
+        { value: 'Gebiet Charkiw', path: 'khar.html' },
+        { value: 'Gebiet Cherson', path: 'khers.html' },
+        { value: 'Gebiet Chmelnyzkyj', path: 'khmel.html' },
+        { value: 'Gebiet Tscherkassy', path: 'cher.html' },
+        { value: 'Gebiet Tscherniwzi', path: 'cherniv.html' },
+        { value: 'Gebiet Tschernihiw', path: 'chernig.html' }
+      ];
+
+      const selectedOption = cityOptions.find(option => option.value === selectedCity);
+      if (selectedOption) {
+        window.location.href = selectedOption.path;
+      }
+    }
+  </script>
+</body>
+</html>
